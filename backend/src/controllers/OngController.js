@@ -3,14 +3,14 @@ const connection = require('../database/connection');
 
 async function create(req, res) {
 
-    const { name, email, whatsaap, city, uf } = req.body;
+    const { name, email, whatsapp, city, uf } = req.body;
     const id = crypto.randomBytes(4).toString('HEX');
 
     await connection('ongs').insert({
         id,
         name,
         email,
-        whatsaap,
+        whatsapp,
         city,
         uf
     });
