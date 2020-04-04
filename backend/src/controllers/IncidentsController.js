@@ -9,7 +9,7 @@ async function index(req, res) {
         .join('ongs', 'ong_id', '=', 'ongs.id')
         .limit(5)
         .offset((page - 1) * 5)
-        .select(['incidents.*', 'ongs.name', 'ongs.email', 'ongs.city', 'ongs.whatsaap', 'ongs.uf']);
+        .select(['incidents.*', 'ongs.name', 'ongs.email', 'ongs.city', 'ongs.whatsapp', 'ongs.uf']);
 
     res.header('X-Total-Count', count['count(*)']);
     return res.json(incidents);
