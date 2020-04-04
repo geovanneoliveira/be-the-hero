@@ -31,7 +31,7 @@ export default function Incidents() {
         setTotal(response.headers['x-total-count']);
         setPage(page + 1);
         setLoading(false);
-    }
+    }  
 
     useEffect(() => { loadIncidents(); }, []);
 
